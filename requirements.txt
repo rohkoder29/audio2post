@@ -1,7 +1,8 @@
 mlx-whisper
 huggingface_hub
 ffmpeg-python
-pyannote.audio
+speechbrain
+scikit-learn
 jinja2
 html2image
 python-dotenv
