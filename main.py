@@ -11,8 +11,9 @@ def main():
     args = parser.parse_args()
 
     # Check for HF Token
-    if not os.getenv("HF_TOKEN"):
-        print("Error: HF_TOKEN not found in environment variables. Please add it to .env")
+    hf_token = os.getenv("HUGGINGFACE_API_KEY") or os.getenv("HF_TOKEN")
+    if not hf_token:
+        print("Error: HUGGINGFACE_API_KEY or HF_TOKEN not found in environment variables.")
         return
 
     # Check directories
