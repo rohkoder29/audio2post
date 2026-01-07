@@ -1,0 +1,12 @@
+mlx-whisper
+huggingface_hub
+ffmpeg-python
+pyannote.audio
+jinja2
+html2image
+python-dotenv
+noisereduce
+soundfile
+numpy
+torch
+torchaudio
