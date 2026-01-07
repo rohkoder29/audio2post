@@ -4,7 +4,7 @@ ffmpeg-python
 speechbrain
 scikit-learn
 jinja2
-html2image
+playwright
 python-dotenv
 noisereduce
 soundfile

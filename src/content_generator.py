@@ -19,25 +19,25 @@ def generate_text(client, prompt, model="Qwen/Qwen2.5-72B-Instruct"):
 
 def create_sermon_prompt(transcript_text):
     return f"""
-    You are a social media manager for a church. Analyze the following sermon transcript and generate:
-    1. A concise summary (2 sentences).
-    2. A list of 5 key takeaways (bullet points).
-    3. Three "Quote Card" candidates. Each must be a powerful, standalone quote from the text, less than 20 words, attributed to the speaker.
-    4. A Facebook post caption promoting this sermon (engaging, using emojis).
+    Eres un administrador de redes sociales para una iglesia en Argentina. Analiza la siguiente transcripción de sermón y genera:
+    1. Un resumen conciso (2 oraciones) en español rioplatense (neutro pero natural).
+    2. Una lista de 5 puntos clave (bullet points).
+    3. Tres candidatos para "Frases destacadas" (Quote Cards). Cada una debe ser una cita impactante y autónoma del texto, de menos de 20 palabras, atribuida al orador.
+    4. Un caption para Instagram/Facebook promocionando este mensaje (atrapante, usa emojis, tono cercano y argentino).
 
-    Transcript:
+    Transcripción:
     {transcript_text[:15000]} 
     """ # Truncate to avoid context limit issues on free tier
 
 def create_debate_prompt(transcript_text):
     return f"""
-    You are a content creator analyzing a theological debate. Analyze the following transcript and generate:
-    1. A summary of the central conflict/topic.
-    2. "Point vs Counter-point" analysis (3 key arguments).
-    3. Three "Quote Card" candidates (one from each side if possible).
-    4. A neutral, engaging social media post asking the audience for their thoughts.
+    Eres un creador de contenido analizando un debate teológico en Argentina. Analiza la siguiente transcripción y genera:
+    1. Un resumen del conflicto central/tema.
+    2. Análisis "Punto vs Contrapunto" (3 argumentos clave).
+    3. Tres candidatos para "Frases destacadas" (una de cada lado si es posible).
+    4. Un post de redes sociales neutral y atractivo preguntando a la audiencia su opinión.
 
-    Transcript:
+    Transcripción:
     {transcript_text[:15000]}
     """
 

@@ -18,8 +18,8 @@ def transcribe_audio(audio_path, model="mlx-community/whisper-large-v3-mlx"):
     Transcribes audio using mlx-whisper.
     Returns segments with text and timestamps.
     """
-    print(f"Transcribing {audio_path} with {model}...")
-    result = mlx_whisper.transcribe(audio_path, path_or_hf_repo=model)
+    print(f"Transcribing {audio_path} with {model} (Spanish)...")
+    result = mlx_whisper.transcribe(audio_path, path_or_hf_repo=model, language="es")
     return result["segments"]
 
 def compute_embeddings(audio_path, segments):
