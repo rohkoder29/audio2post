@@ -1,6 +1,13 @@
 import mlx_whisper
 import torch
 import torchaudio
+import os
+
+# Set HF_TOKEN for speechbrain/huggingface_hub compatibility
+# (newer huggingface_hub uses HF_TOKEN env var, not use_auth_token param)
+hf_token = os.getenv("HUGGINGFACE_API_KEY") or os.getenv("HF_TOKEN")
+if hf_token:
+    os.environ["HF_TOKEN"] = hf_token
 
 # Monkey-patch torchaudio for speechbrain compatibility
 if not hasattr(torchaudio, "list_audio_backends"):
